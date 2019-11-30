@@ -22,7 +22,7 @@ public class Main {
             break;
 
             case 2:
-                System.out.println(ConvertToKelvin.convert(num));
+                System.out.println(ConverterToKelvin.convert(num));
                 break;
             default:
                 throw new IllegalArgumentException("Number must be < 3");
