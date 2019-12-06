@@ -117,6 +117,14 @@ public class Shop {
         System.out.println(res);
     }
 
+    public String shopInfo() {
+        StringBuilder res = new StringBuilder("Shop info:\n");
+        for (Product product: productList) {
+            res.append(product.getName()).append("s: ").append(product.getCount()).append("\n");
+        }
+        return res.toString();
+    }
+
     private int getIndex(String name) {
         for (Product product : productList) {
             if (name.equals(product.getName())) return productList.indexOf(product);

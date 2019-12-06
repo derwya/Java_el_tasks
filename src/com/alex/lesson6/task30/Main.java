@@ -15,6 +15,12 @@ public class Main {
         shop.addProduct("cat", 1000);
         shop.addProducts(1000, 1000, 1000);
         shop.addProducts("cat", 1000, "parrot", 1000);
+
+        System.out.println(shop.shopInfo());
+
+        System.out.println("-------------------------");
+
+
         System.out.println(shop.buyProduct("cat", 1000));
         System.out.println(shop.buyProducts(1000, 1000, 1000));
         System.out.println(shop.buyProducts("cat", 1000, "parrot", 1000));
