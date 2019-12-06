@@ -1,8 +1,10 @@
 package com.alex.lesson6.task31;
 
 public interface List<E> {
-    void add();
+
+    void add(E el);
     void set(int index, E el);
-    void remove(int index);
+    E remove(int index);
     E get(int index);
+    void printArr();
 }
