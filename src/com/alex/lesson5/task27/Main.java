@@ -18,14 +18,15 @@ public class Main {
         System.out.println("Result is:");
         switch (system) {
             case 1:
-                System.out.println(ConverterToFahrenheit.convert(num));
+                System.out.println(new ConverterToFahrenheit().convert(num));
             break;
 
             case 2:
-                System.out.println(ConverterToKelvin.convert(num));
+                System.out.println(new ConverterToKelvin().convert(num));
                 break;
             default:
                 throw new IllegalArgumentException("Number must be < 3");
         }
     }
 }
+
