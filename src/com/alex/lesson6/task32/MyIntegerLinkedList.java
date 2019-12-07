@@ -3,6 +3,7 @@ package com.alex.lesson6.task32;
 public class MyIntegerLinkedList implements List<Integer> {
     private MyIntegerLinkedList.Node head;
     private MyIntegerLinkedList.Node tail;
+    private int size = 0;
 
     public MyIntegerLinkedList() {
         this.head = new MyIntegerLinkedList.Node(null, null, null);
@@ -19,6 +20,7 @@ public class MyIntegerLinkedList implements List<Integer> {
             head.next = node;
             head = node;
         }
+        ++this.size;
     }
 
     @Override
@@ -32,6 +34,7 @@ public class MyIntegerLinkedList implements List<Integer> {
         MyIntegerLinkedList.Node newNode = new Node(prev, el, next);
         prev.next = newNode;
         next.prev = newNode;
+        ++this.size;
     }
 
     @Override
@@ -40,6 +43,7 @@ public class MyIntegerLinkedList implements List<Integer> {
             Integer res = tail.el;
             tail = tail.next;
             tail.prev = null;
+            --this.size;
             return res;
         } else {
             MyIntegerLinkedList.Node node = tail;
@@ -48,6 +52,7 @@ public class MyIntegerLinkedList implements List<Integer> {
             }
             node.prev.next = node.next;
             node.next.prev = node.prev;
+            --this.size;
             return node.el;
         }
     }
@@ -77,19 +82,13 @@ public class MyIntegerLinkedList implements List<Integer> {
     }
 
     public int size() {
-        MyIntegerLinkedList.Node node = head;
-        int i = 0;
-        while (node != null) {
-            node = node.prev;
-            i++;
-        }
-        return i;
+        return this.size;
     }
 
     private static class Node {
-        MyIntegerLinkedList.Node prev = null;
-        MyIntegerLinkedList.Node next = null;
-        Integer el = null;
+        MyIntegerLinkedList.Node prev;
+        MyIntegerLinkedList.Node next;
+        Integer el;
 
         private Node(MyIntegerLinkedList.Node prev, Integer el, MyIntegerLinkedList.Node next) {
             this.prev = prev;
