@@ -18,5 +18,16 @@ public class Main {
         myStringArrayList.remove(2);
         myStringArrayList.printArr();
         System.out.println(myStringArrayList.size());
+        myStringArrayList.add("words");
+        myStringArrayList.add("words");
+        myStringArrayList.add("words");
+        myStringArrayList.add("words");
+        myStringArrayList.add("words");
+        myStringArrayList.add("words");
+        myStringArrayList.add("words");
+        myStringArrayList.set(5, "some text");
+        myStringArrayList.printArr();
+        System.out.println(myStringArrayList.size());
+
     }
 }
