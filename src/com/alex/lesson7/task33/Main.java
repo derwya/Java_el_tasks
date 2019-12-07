@@ -1,7 +1,6 @@
 package com.alex.lesson7.task33;
 
-import java.util.Date;
-import java.util.HashMap;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -21,10 +20,18 @@ public class Main {
         people.forEach((k, v) -> System.out.println(k + ": " + v));
 
         System.out.println("__________________________________________________________");
-        HashMap<String, Date> peopleClone = (HashMap<String, Date>) people.clone();
-        peopleClone.forEach((k, v) -> {
-            if(v.getMonth() > 5 && v.getMonth() < 9) people.remove(k);
+
+        List<String> keyArrayToDelete = new ArrayList<>();
+
+        Calendar calendar = new GregorianCalendar();
+
+        people.forEach((k, v) -> {
+            calendar.setTime(v);
+            int month = calendar.get(Calendar.MONTH);
+            if(month > 4 && month < 8) keyArrayToDelete.add(k);
         });
+
+        keyArrayToDelete.forEach((people::remove));
 
 
         people.forEach((k, v) -> System.out.println(k + ": " + v));
