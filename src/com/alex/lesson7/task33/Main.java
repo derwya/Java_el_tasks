@@ -13,8 +13,8 @@ public class Main {
         people.put("Popov", new Date(1071187200000L));
         people.put("Pyatochkin", new Date(1055376000000L));
         people.put("Verbitsky", new Date(1052697600000L));
-        people.put("Sazhin", new Date(1050105600000L));
-        people.put("Aripov", new Date(1047427200000L));
+        people.put("Lodkin", new Date(1050105600000L));
+        people.put("Pyatkin", new Date(1047427200000L));
         people.put("FantasiaZakonchilas", new Date(1045008000000L));
 
         people.forEach((k, v) -> System.out.println(k + ": " + v));
