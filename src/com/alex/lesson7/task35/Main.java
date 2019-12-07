@@ -60,9 +60,19 @@ public class Main {
 
     public static class Cat extends Animal {
         public Cat() {}
+
+        @Override
+        public String toString() {
+            return "Cat: " + this.hashCode();
+        }
     }
 
     public static class Dog extends Animal {
         public Dog() {}
+
+        @Override
+        public String toString() {
+            return "Dog: " + this.hashCode();
+        }
     }
 }
