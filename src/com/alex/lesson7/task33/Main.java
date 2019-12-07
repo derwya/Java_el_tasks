@@ -31,7 +31,7 @@ public class Main {
             if(month > 4 && month < 8) keyArrayToDelete.add(k);
         });
 
-        keyArrayToDelete.forEach((people::remove));
+        keyArrayToDelete.forEach(people::remove);
 
 
         people.forEach((k, v) -> System.out.println(k + ": " + v));
