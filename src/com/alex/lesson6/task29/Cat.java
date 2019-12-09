@@ -33,8 +33,8 @@ public class Cat {
     @Override
     public String toString() {
         return "Cat " + name + " {\n" +
-                "name: '" + name + "\',\n" +
-                "color: '" + color + "\',\n" +
+                "name: '" + name + "',\n" +
+                "color: '" + color + "',\n" +
                 "age: " + age +",\n" +
                 "weight: " + weight + "\n" +
                 '}';

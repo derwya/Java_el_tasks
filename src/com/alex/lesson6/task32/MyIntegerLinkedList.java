@@ -68,16 +68,15 @@ public class MyIntegerLinkedList implements List<Integer> {
 
     @Override
     public void printArr() {
-        StringBuilder res = new StringBuilder("] ");
-        MyIntegerLinkedList.Node node = head;
+        StringBuilder res = new StringBuilder("[ ");
+        MyIntegerLinkedList.Node node = tail;
         if(node.el == null) System.out.println("null");
-        res.append(node.el).append(" ,");
-        while (node.prev != null) {
-            res.append(node.prev.el).append(" ,");
-            node = node.prev;
+        res.append(node.el).append(", ");
+        while (node.next != null) {
+            res.append(node.next.el).append(", ");
+            node = node.next;
         }
-        res.replace(res.length()-2, res.length(), " ").append("[");
-        res.reverse();
+        res.replace(res.length()-2, res.length(), " ").append("]");
         System.out.println(res);
     }
 
