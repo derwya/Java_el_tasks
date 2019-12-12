@@ -6,16 +6,20 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String input = "";
-        ArrayList<String> arrayList = new ArrayList<>();
-        while (true) {
-            input = reader.readLine();
-            if(!input.equals("stop")) arrayList.add(input);
-            else break;
+    public static void main(String[] args) {
+        ArrayList<String> arrayList;
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+            String input = "";
+            arrayList = new ArrayList<>();
+            while (true) {
+                input = reader.readLine();
+                if (!input.equals("stop")) arrayList.add(input);
+                else break;
+            }
+            newSort(arrayList).forEach(System.out::println);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        newSort(arrayList).forEach(System.out::println);
     }
 
     public static ArrayList<String> newSort(ArrayList<String> arrayList) {
