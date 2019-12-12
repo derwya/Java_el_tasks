@@ -3,8 +3,12 @@ package com.alex.lesson8.task37;
 import java.io.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
-        copy();
+    public static void main(String[] args) {
+        try {
+            copy();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void copy() throws IOException {
