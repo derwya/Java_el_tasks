@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Main {
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         try(BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
             Date date = new SimpleDateFormat("dd/MM/yyyy").parse(reader.readLine());
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MMM dd, yyyy");
