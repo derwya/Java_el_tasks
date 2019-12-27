@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         List<Integer> list = new ArrayList<>(100);
         Random random = new Random();
-        random.ints(10, 0, 100).forEach(list::add);
+        random.ints(10, 0, 100).forEach(el -> list.add(el));
 
         System.out.println(list.toString());
     }
